@@ -1,17 +1,15 @@
 // import QuestionCard from "@/components/cards/QuestionCard";
-// import HomeFilters from "@/components/home/HomeFilters";
-// import Filter from "@/components/shared/Filter";
+import HomeFilters from "@/components/home/HomeFilters";
+import Filter from "@/components/shared/Filter";
 // import NoResult from "@/components/shared/NoResult";
 // import Pagination from "@/components/shared/Pagination";
 import LocalSearchbar from "@/components/shared/search/LocalSearchbar";
 import { Button } from "@/components/ui/button";
-// import { HomePageFilters } from "@/constants/filters";
+import { HomePageFilters } from "@/constants/filters";
 // import { getQuestions, getRecommendedQuestions } from "@/lib/actions/question.action";
 import { SearchParamsProps } from "@/types";
+import { Metadata } from "next";
 import Link from "next/link";
-
-import type { Metadata } from "next";
-// import { auth } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: "Home | Dev Overflow",
@@ -64,14 +62,14 @@ export default async function Home({ searchParams }: SearchParamsProps) {
           otherClasses="flex-1"
         />
 
-        {/* <Filter
+        <Filter
           filters={HomePageFilters}
-          otherClasses="min-h-[56px] sm:min-w-[170px]"
-          containerClasses="hidden max-md:flex"
-        /> */}
+          // otherClasses="min-h-[56px] sm:min-w-[170px]"
+          // containerClasses="hidden max-md:flex"
+        />
       </div>
 
-      {/* <HomeFilters /> */}
+      <HomeFilters />
 
       <div className="mt-10 flex w-full flex-col gap-6">
         {/* {result.questions.length > 0 ?
