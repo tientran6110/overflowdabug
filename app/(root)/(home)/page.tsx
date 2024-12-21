@@ -3,7 +3,7 @@
 // import Filter from "@/components/shared/Filter";
 // import NoResult from "@/components/shared/NoResult";
 // import Pagination from "@/components/shared/Pagination";
-// import LocalSearchbar from "@/components/shared/search/LocalSearchbar";
+import LocalSearchbar from "@/components/shared/search/LocalSearchbar";
 import { Button } from "@/components/ui/button";
 // import { HomePageFilters } from "@/constants/filters";
 // import { getQuestions, getRecommendedQuestions } from "@/lib/actions/question.action";
@@ -56,7 +56,7 @@ export default async function Home({ searchParams }: SearchParamsProps) {
       </div>
 
       <div className="mt-11 flex justify-between gap-5 max-sm:flex-col sm:items-center">
-        {/* <LocalSearchbar 
+        <LocalSearchbar
           route="/"
           iconPosition="left"
           imgSrc="/assets/icons/search.svg"
@@ -64,7 +64,7 @@ export default async function Home({ searchParams }: SearchParamsProps) {
           otherClasses="flex-1"
         />
 
-        <Filter
+        {/* <Filter
           filters={HomePageFilters}
           otherClasses="min-h-[56px] sm:min-w-[170px]"
           containerClasses="hidden max-md:flex"
