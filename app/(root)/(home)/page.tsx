@@ -1,7 +1,7 @@
 // import QuestionCard from "@/components/cards/QuestionCard";
 import HomeFilters from "@/components/home/HomeFilters";
 import Filter from "@/components/shared/Filter";
-// import NoResult from "@/components/shared/NoResult";
+import NoResult from "@/components/shared/NoResult";
 // import Pagination from "@/components/shared/Pagination";
 import LocalSearchbar from "@/components/shared/search/LocalSearchbar";
 import { Button } from "@/components/ui/button";
@@ -64,8 +64,8 @@ export default async function Home({ searchParams }: SearchParamsProps) {
 
         <Filter
           filters={HomePageFilters}
-          // otherClasses="min-h-[56px] sm:min-w-[170px]"
-          // containerClasses="hidden max-md:flex"
+          otherClasses="min-h-[56px] sm:min-w-[170px]"
+          containerClasses="hidden max-md:flex"
         />
       </div>
 
