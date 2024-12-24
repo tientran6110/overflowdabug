@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import Theme from "./Theme";
 import MobileNav from "./MobileNav";
-import GlobalSearch from "../search/GlobalSearch";
+// import GlobalSearch from "../search/GlobalSearch";
 
 const Navbar = () => {
   return (
@@ -21,7 +21,7 @@ const Navbar = () => {
           Overflow da <span className="text-primary-500">Bug</span>
         </p>
       </Link>
-      <GlobalSearch />
+      {/* <GlobalSearch /> */}
       <div className="flex-between gap-5">
         <Theme />
         <SignedIn>

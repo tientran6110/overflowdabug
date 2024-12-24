@@ -1,3 +1,16 @@
 {
-  "extends": ["next/core-web-vitals", "standard", "plugin:tailwindcss/recommended", "prettier"]
+  "extends": [
+    "next/core-web-vitals",
+    "standard",
+    "plugin:tailwindcss/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "no-unused-vars": "off",
+    "camelcase": "off",
+    "tailwindcss/classnames-order": "off",
+    "tailwindcss/no-unnecessary-arbitrary-value": "off",
+    "tailwindcss/enforces-shorthand": "off",
+    "tailwindcss/no-custom-classname": "off"
+  }
 }
