@@ -21,15 +21,15 @@ export const metadata: Metadata = {
 
 export default async function Home({ searchParams }: SearchParamsProps) {
   const { userId }: { userId: string | null } = await auth();
-
+  const resolvedSearchParams = await searchParams;
   let result;
 
-  if (searchParams?.filter === "recommended") {
+  if (resolvedSearchParams?.filter === "recommended") {
     if (userId) {
       result = await getRecommendedQuestions({
         userId,
-        searchQuery: searchParams.q,
-        page: searchParams.page ? +searchParams.page : 1,
+        searchQuery: resolvedSearchParams.q,
+        page: resolvedSearchParams.page ? +resolvedSearchParams.page : 1,
       });
     } else {
       result = {
@@ -39,9 +39,9 @@ export default async function Home({ searchParams }: SearchParamsProps) {
     }
   } else {
     result = await getQuestions({
-      searchQuery: searchParams.q,
-      filter: searchParams.filter,
-      page: searchParams.page ? +searchParams.page : 1,
+      searchQuery: resolvedSearchParams.q,
+      filter: resolvedSearchParams.filter,
+      page: resolvedSearchParams.page ? +resolvedSearchParams.page : 1,
     });
   }
 
